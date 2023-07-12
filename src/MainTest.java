@@ -3,6 +3,7 @@ import adapter.PrintBanner;
 import iterator.Book;
 import iterator.BookShelf;
 import iterator.MyIterator;
+import template.CharDisplay;
 
 /**
  * @Description :
@@ -10,7 +11,7 @@ import iterator.MyIterator;
  */
 public class MainTest {
     public static void main(String[] args) {
-        testAdapter();
+        testTemplate();
     }
 
     private static void testIterator() {
@@ -29,5 +30,10 @@ public class MainTest {
         Print p = new PrintBanner("Hello");
         p.printWeak();
         p.printStrong();
+    }
+
+    private static void testTemplate() {
+        CharDisplay charDisplay = new CharDisplay('A');
+        charDisplay.display();
     }
 }
