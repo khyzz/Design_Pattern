@@ -1,3 +1,5 @@
+import adapter.Print;
+import adapter.PrintBanner;
 import iterator.Book;
 import iterator.BookShelf;
 import iterator.MyIterator;
@@ -8,7 +10,7 @@ import iterator.MyIterator;
  */
 public class MainTest {
     public static void main(String[] args) {
-        testIterator();
+        testAdapter();
     }
 
     private static void testIterator() {
@@ -21,5 +23,11 @@ public class MainTest {
         while(iterator.hasNext()) {
             System.out.println(iterator.next().getName());
         }
+    }
+
+    private static void testAdapter() {
+        Print p = new PrintBanner("Hello");
+        p.printWeak();
+        p.printStrong();
     }
 }
